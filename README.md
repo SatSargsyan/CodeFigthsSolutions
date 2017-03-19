@@ -77,3 +77,53 @@ int[] replaceMiddle(int[] arr) {
 }
 
 ```
+
+
+
+#### Given K sorted arrays, return their sorted concatenation.
+
+Example
+
+For arrays = [[1, 3, 5], [2, 3], [2, 3, 5, 8]], the output should be
+mergeKArrays(arrays) = [1, 2, 2, 3, 3, 3, 5, 5, 8].
+
+Input/Output
+
+[time limit] 6000ms (cs)
+[input] array.array.integer arrays
+
+An array of K one-dimensional sorted arrays.
+
+Constraints:
+3 ≤ arrays.length ≤ 10,
+0 ≤ arrays[i].length ≤ 5,
+-100 ≤ arrays[i][j] ≤ 100.
+```C#
+int[] mergeKArrays(int[][] arrays) {
+       
+            int    slength=0;
+         for (int i = 0; i < arrays.Length; i++)
+        {
+           slength+= arrays[i].Length; 
+        }
+               
+         int[] arr1=new int[slength];
+        int k=0;
+        while(k<slength)
+        {
+for (int i = 0; i < arrays.Length; i++)
+        {
+                for (int j = 0; j < arrays[i].Length; j++)
+            {
+          
+           arr1[k]=arrays[i][j];
+                   k++; 
+            
+        }    
+        }
+        }    
+
+        Array.Sort(arr1);
+  return arr1;
+}
+```
