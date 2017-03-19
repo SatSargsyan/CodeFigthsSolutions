@@ -1,11 +1,11 @@
 # CodeFigthsSolutions
-
+՝՝՝C#
 int[] removeArrayPart(int[] inputArray, int l, int r) {
    if(inputArray.Length == 0) return inputArray;
 return inputArray.Where((x,i)=>i<l||i>r).ToArray();
 }
-
-
+```
+```C#
 int[] replaceMiddle(int[] arr) {
 int[] arr1 = new int[arr.Length-1];
         if(arr.Length%2 == 0)
@@ -29,10 +29,10 @@ int[] arr1 = new int[arr.Length-1];
  return arr1;
                }  else return arr;
 }
+```
 
 
-
-
+```C#
 int[] replaceMiddle(int[] arr) {
 int n=arr.Length/2;
 int[] arr1 = new int[n];
@@ -52,11 +52,11 @@ int[] arr1 = new int[n];
                }  else return arr;
 }
 
+```
 
 
-
-
-///int[] replaceMiddle(int[] arr) {
+```C#
+int[] replaceMiddle(int[] arr) {
 int n=arr.Length;
         if(arr.Length%2 == 0)
               
@@ -64,9 +64,10 @@ int n=arr.Length;
                             
          else return arr;
 }
+```
 
-
-///int[] replaceMiddle(int[] arr) {
+```C#
+int[] replaceMiddle(int[] arr) {
     return arr.Length % 2 == 1 ? arr :
         arr.Take(arr.Length/2-1)
             .Concat(new [] { arr.Skip(arr.Length/2-1).Take(2).Sum() })
@@ -74,3 +75,4 @@ int n=arr.Length;
             .ToArray();
 }
 
+```
