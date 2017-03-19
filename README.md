@@ -1,5 +1,6 @@
 # CodeFigthsSolutions
-՝՝՝C#
+
+```C#
 int[] removeArrayPart(int[] inputArray, int l, int r) {
    if(inputArray.Length == 0) return inputArray;
 return inputArray.Where((x,i)=>i<l||i>r).ToArray();
