@@ -1,0 +1,16 @@
+### Enclose in brackets
+Given a string, enclose it in round brackets.
+
+Example
+
+For inputString = "abacaba", the output should be
+encloseInBrackets(inputString) = "(abacaba)".
+
+```C#
+string encloseInBrackets(string inputString) {
+return "("+inputString+")";
+}
+```
+
+is similiar
+```C#
