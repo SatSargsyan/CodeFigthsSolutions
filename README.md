@@ -173,3 +173,22 @@ An array [24, 85, 0] looks like [00011000, 01010101, 00000000] in binary.
 After packing these into one number we get 00000000 01010101 00011000 (spaces are placed for convenience), which equals to 21784.
 
 ```C#
+int arrayPacking(int[] a) {
+ if(1 <= a.Length && a.Length <= 4) {
+        int result = 0;
+        for(int index=0;index<a.Length;index++) {
+            if(a[index]>256 || a[index]<0) {
+                throw new ArgumentOutOfRangeException();
+            }
+            else {
+                result += a[index] << 8 * index;
+            }
+        }
+        return result;
+    }
+    else {
+        throw new ArgumentOutOfRangeException();
+    }
+         }
+```
+         
