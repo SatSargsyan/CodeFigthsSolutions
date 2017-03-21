@@ -14,3 +14,7 @@ return "("+inputString+")";
 
 is similiar
 ```C#
+string encloseInBrackets(string inputString) {
+    return string.Format("({0})", inputString);
+}
+```
