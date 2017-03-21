@@ -191,4 +191,97 @@ int arrayPacking(int[] a) {
     }
          }
 ```
-         
+#### You are given two numbers a and b where 0 ≤ a ≤ b. Imagine you construct an array of all the integers from a to b inclusive. You need to count the number of 1s in the binary representations of all the numbers in the array.
+
+Example
+
+For a = 2 and b = 7, the output should be
+rangeBitCount(a, b) = 11.
+
+Given a = 2 and b = 7 the array is: [2, 3, 4, 5, 6, 7]. Converting the numbers to binary, we get [10, 11, 100, 101, 110, 111], which contains 1 + 2 + 1 + 2 + 2 + 3 = 11 1s.
+```C#
+int rangeBitCount(int a, int b) {
+    if(0<=a && a<=b) {
+        int total = 0;
+        for (int i = a; i <= b; i++) {
+            int t = i;
+            while (t != 0) {
+                if((t&1)==1)
+                total++;
+                t >>= 1;
+            }
+        }
+        
+ 
+        return total;
+    }
+    else
+    {
+        throw new ArgumentOutOfRangeException();
+    }
+}
+```
+#### Reverse the order of the bits in a given integer.
+
+Example
+
+For a = 97, the output should be
+mirrorBits(a) = 67.
+
+97 equals to 1100001 in binary, which is 1000011 after mirroring, and that is 67 in base 10.
+
+For a = 8, the output should be
+mirrorBits(a) = 1.
+```C#
+int mirrorBits(int a) {
+    int b = 0;
+    while (a > 0) {
+        b <<= 1;
+        b |= a & 1;
+        a >>= 1;
+    }
+
+    return b;
+}
+```
+
+#### Presented with the integer n, find the 0-based position of the second rightmost zero bit in its binary representation (it is guaranteed that such a bit exists), counting from right to left.
+
+Return the value of 2position_of_the_found_bit.
+
+Example
+
+For n = 37, the output should be
+secondRightmostZeroBit(n) = 8.
+
+3710 = 1001012. The second rightmost zero bit is at position 3 (0-based) from the right in the binary representation of n.
+Thus, the answer is 23 = 8.
+
+```C#
+int secondRightmostZeroBit(int n)
+{
+  return  -~((n-~(n^(n+1))/2)^(n-~(n^(n+1))/2+1))/2 ; ;
+}
+```
+
+#### You're given an arbitrary 32-bit integer n. Swap each pair of adjacent bits in its binary representation and return the result as a decimal number.
+
+Example
+
+For n = 13, the output should be
+swapAdjacentBits(n) = 14.
+
+1310 = 11012 ~> 11102 = 1410.
+
+For n = 74, the output should be
+swapAdjacentBits(n) = 133.
+
+7410 = 010010102 ~> 100001012 = 13310.
+Note the preceding zero written in front of the initial number: since both numbers are 32-bit integers, they have 32 bits in their binary representation. The preceding zeros in other cases don't matter, so they are omitted. Here, however, it does make a difference.
+```C#
+int swapAdjacentBits(int n)
+{
+  return n + m + 1 & ~m - n ;
+}
+```
+
