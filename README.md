@@ -342,9 +342,4 @@ int equalPairOfBits(int n, int m)
 
 
 
-New Level
-```C#
-string encloseInBrackets(string inputString) {
-    return string.Format("({0})", inputString);
-}
-```
+
