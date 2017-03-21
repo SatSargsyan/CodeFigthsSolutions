@@ -133,7 +133,7 @@ for (int i = 0; i < arrays.Length; i++)
 
 You figured out that some numbers have a modified single digit in their binary representation. More specifically, in the given number n the kth bit from the right was initially set to 0, but its current value might be different. It's now up to you to write a function that will change the kth bit of n back to 0.
 
-Example
+<a href=https://codefightssolver.wordpress.com/2016/10/19/kill-k-th-bit/>Example</a>
 
 For n = 37 and k = 3, the output should be
 killKthBit(n, k) = 33.
@@ -147,3 +147,9 @@ The 4th bit is 0 already (looks like the Mad Coder forgot to encrypt this number
 
 
 ```C#
+int killKthBit(int n, int k)
+{
+            returnn & ~(1 << (k - 1)) ;
+          
+}
+```
