@@ -60,6 +60,15 @@ namespace Round1_is_tandem
 
             return true;
         }
-
+        //static bool isTandemRepeat(string inputString)
+        //{
+        //    if (inputString.Length == 1 || inputString.Length % 2 == 1)
+        //        return false;
+        //    string subString = inputString.Substring(0, inputString.Length / 2);
+        //    string temp2 = inputString.Replace(subString, "");
+        //    if (String.IsNullOrEmpty(temp2))
+        //        return true;
+        //    return false;
+        //}
     }
 }

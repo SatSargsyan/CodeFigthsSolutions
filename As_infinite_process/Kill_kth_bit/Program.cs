@@ -57,7 +57,8 @@ namespace Kill_kth_bit
 
 
             //return Convert.ToInt32(s2, 2); 
-            return (n & (int)Math.Pow(2, k - 1)) == 0 ? n : n - (int)Math.Pow(2, k - 1);
+            //return (n & (int)Math.Pow(2, k - 1)) == 0 ? n : n - (int)Math.Pow(2, k - 1);
+            return n & ~(1 << (k - 1));
         }
     }
 }

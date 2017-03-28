@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rounders", "Rounders\Rounde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kill_kth_bit", "Kill_kth_bit\Kill_kth_bit.csproj", "{6BF3C0F2-0B7A-4088-808C-B234EE6AC48A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Is_case-Insensitive_Palindrome", "Is_case-Insensitive_Palindrome\Is_case-Insensitive_Palindrome.csproj", "{2EA0EEED-E940-47EC-A6E6-61105A6B087A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "As_MAC_Procces", "As_MAC_Procces\As_MAC_Procces.csproj", "{11DE3355-DF36-4B46-A427-142A8AD861C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{6BF3C0F2-0B7A-4088-808C-B234EE6AC48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BF3C0F2-0B7A-4088-808C-B234EE6AC48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BF3C0F2-0B7A-4088-808C-B234EE6AC48A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA0EEED-E940-47EC-A6E6-61105A6B087A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA0EEED-E940-47EC-A6E6-61105A6B087A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA0EEED-E940-47EC-A6E6-61105A6B087A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA0EEED-E940-47EC-A6E6-61105A6B087A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11DE3355-DF36-4B46-A427-142A8AD861C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DE3355-DF36-4B46-A427-142A8AD861C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DE3355-DF36-4B46-A427-142A8AD861C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DE3355-DF36-4B46-A427-142A8AD861C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
