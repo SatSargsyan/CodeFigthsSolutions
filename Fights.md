@@ -44,11 +44,11 @@ int correctEmails(std::string pattern) {
 
 
 
-### A ticket number is usually represented by the even number of digits (leading zeros are allowed). It is considered to be lucky if the sum of the first half of the digits is equal to the sum of the second half.
+### A ticket number is usually represented by the even number of digits (leading zeros are allowed). It is considered to be lucky if the sum of the first half of the digits is equal to the sum of the second half.  
 
 Given an integer n, find the number of lucky tickets with n-digit number.
 
-Example
+Example-Don't true
 
 For n = 2, the output should be
 countLuckyNumbers(n) = 10.
@@ -81,5 +81,70 @@ int countLuckyNumbers(int n) {
     result +=dp[sum][sum];
   }
   return result;
+}
+```
+### Sort an array of integers.
+
+Example -Don't true
+
+For sequence = [3, 6, 1, 5, 3, 6], the output should be
+mergeSort(sequence) = [1, 3, 3, 5, 6, 6].
+
+```C#
+std::vector<int> mergeSort(std::vector<int> sequence) {
+
+  struct Helper {
+
+    std::vector<int> sequence;
+
+    void mergeArrays(int left, int middle, int right) {
+
+      std::vector<int> result;
+      int i, j;
+
+      for (i = left, j = middle; i < middle && j < right; ) {
+        if (sequence[i] < sequence[j]) {
+          result.push_back(sequence[i]);
+          i++;
+        }
+        else {
+          result.push_back(sequence[j]);
+          j++;
+        }
+      }
+
+      while (i < middle) {
+        result.push_back(sequence[i]);
+        i++;
+      }
+
+      while (j < right) {
+        result.push_back(sequence[j]);
+        j++;
+      }
+
+      for (i = left; i < right; i++) {
+        sequence[i] = result[i - left];
+      }
+    }
+
+    void split(int left, int right) {
+
+      int middle = (left + right) / 2;
+
+      if (left + 1 == right) {
+        return;
+      }
+      split(left, middle);
+      split(middle + 1, right);
+      mergeArrays(left, middle, right);
+    }
+  };
+
+  Helper h;
+  h.sequence = sequence;
+  h.split(0, sequence.size());
+
+  return h.sequence;
 }
 ```
