@@ -1,5 +1,5 @@
 
-#### In CodeFights marathons, each task score is calculated independently. For a specific task, you get some amount of points if you solve it correctly, or you get a 0. Here is how the exact number of points is calculated:
+### In CodeFights marathons, each task score is calculated independently. For a specific task, you get some amount of points if you solve it correctly, or you get a 0. Here is how the exact number of points is calculated:
 
 If you solve a task on your first attempt within the first minute, you get maxScore points.
 Each additional minute you spend on the task adds a penalty of (maxScore / 2) * (1 / marathonLength) to your final score.
